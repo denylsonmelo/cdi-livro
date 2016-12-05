@@ -4,7 +4,12 @@ import br.edu.ifpi.capar.cdi.livro.modelo.Funcionario;
 import br.edu.ifpi.capar.cdi.livro.modelo.Escolaridade;
 import br.edu.ifpi.capar.cdi.livro.negocio.CalculadoraDeSalarios;
 import br.edu.ifpi.capar.cdi.livro.negocio.TabelaDeReferenciaSalarial;
+import org.jboss.seam.annotations.Name;
+import org.jboss.seam.annotations.AutoCreate;
+import org.jboss.seam.annotations.In;
 
+@AutoCreate
+@Name("calculadoraDeSalarios")
 public class CalculadoraDeSalariosPlano2002 implements CalculadoraDeSalarios {
 
     @Override
@@ -16,6 +21,7 @@ public class CalculadoraDeSalariosPlano2002 implements CalculadoraDeSalarios {
         }
     }
 
+    @In
     @Override
     public void setTabelaDeReferenciaSalarial(TabelaDeReferenciaSalarial tabela) {
         System.out.println("--- Setando tabela de referencia salarial do Plano de 2002");
