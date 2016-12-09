@@ -4,11 +4,15 @@ import br.edu.ifpi.capar.cdi.livro.modelo.Escolaridade;
 import br.edu.ifpi.capar.cdi.livro.modelo.Funcionario;
 import java.util.Calendar;
 import javax.annotation.PostConstruct;
+import javax.annotation.Priority;
+import javax.enterprise.inject.Alternative;
+import javax.interceptor.Interceptor;
 
 /**
  *
  * @author Denylson Melo
  */
+@Alternative @Priority(Interceptor.Priority.APPLICATION)
 public class CalculadoraDeSalariosPlano2005 implements CalculadoraDeSalarios {
 
     public CalculadoraDeSalariosPlano2005() {
