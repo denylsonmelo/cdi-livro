@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
  */
 public class Produtor {
 
-    private Logger logger = LoggerFactory.getLogger(Produtor.class);
+    private final Logger logger = LoggerFactory.getLogger(Produtor.class);
 
     @Produces
     public Logger criaLogger(InjectionPoint ip, UsuarioLogado usuario) {
