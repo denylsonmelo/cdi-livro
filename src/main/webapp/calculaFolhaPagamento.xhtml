@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:form>
+        <h:panelGrid columns="2">
+            Salário base:
+            <h:inputText value="#{calculadoraFolhaBean.salarioFuncionario}"/>
+            
+            Funcionário adicionados:
+            <h:outputText value="#{calculadoraFolhaBean.funcionarios.size()}"/>
+            
+            Valor da Folha:
+            <h:outputText value="#{calculadoraFolhaBean.folha != null ? calculadoraFolhaBean.folha.valor : 'Não calculado'}"/>
+            
+            <h:commandButton value="Inicia Conversação" action="#{calculadoraFolhaBean.iniciaConversacao()}"/>
+            <h:commandButton value="Termina Conversação" action="#{calculadoraFolhaBean.terminaConversacao()}"/>
+            <h:commandButton value="Adiciona Funcionário" action="#{calculadoraFolhaBean.adicionaFuncionario()}"/>
+            <h:commandButton value="Calcular Folha!" action="#{calculadoraFolhaBean.calcularFolha()}"/>
+        </h:panelGrid>
+    </h:form>
+</html>
+

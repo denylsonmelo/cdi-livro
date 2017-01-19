@@ -9,7 +9,7 @@ import javax.interceptor.Interceptor;
  *
  * @author Denylson Melo
  */
-@Alternative @Priority(Interceptor.Priority.APPLICATION + 1)
+@Alternative @Priority(Interceptor.Priority.APPLICATION)
 public class CalculadoraDeSalariosPlano2013 implements CalculadoraDeSalarios {
 
     //o novo código, que nesse exemplo não influencia no entendimento

@@ -12,7 +12,7 @@ import javax.interceptor.Interceptor;
  *
  * @author Denylson Melo
  */
-@Alternative @Priority(Interceptor.Priority.APPLICATION)
+@Alternative @Priority(Interceptor.Priority.APPLICATION+1)
 public class CalculadoraDeSalariosPlano2005 implements CalculadoraDeSalarios {
 
     public CalculadoraDeSalariosPlano2005() {
