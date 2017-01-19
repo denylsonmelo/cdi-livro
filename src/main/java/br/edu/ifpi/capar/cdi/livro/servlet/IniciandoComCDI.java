@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.slf4j.Logger;
 
 /**
  *
@@ -22,8 +23,10 @@ public class IniciandoComCDI extends HttpServlet {
     @Inject
     private CalculadoraDeImpostos calculadoraDeImpostos;
 
-    public IniciandoComCDI() {
-        System.out.println("--- Instanciando a Servlet ...");
+    @Inject
+    public IniciandoComCDI(Logger logger) {
+        //System.out.println("--- Instanciando a Servlet ...");
+        logger.info("--- Instanciando a Servlet ...");
     }
 
     @PostConstruct
